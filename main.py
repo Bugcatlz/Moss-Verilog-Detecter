@@ -34,11 +34,10 @@ def run_moss_folder(userid, base_folder, target_folder, student_dir, report_dir)
     """
     m = mosspy.Moss(userid, "verilog")
 
-    base_files = glob.glob(os.path.join(base_folder, target_folder, "*.v"))
-    if not base_files:
-        raise FileNotFoundError(f"No .v files found in base folder '{os.path.join(base_folder, target_folder)}'!")
-    
+    base_files = glob.glob(os.path.join(base_folder, "*.v"))
+
     for base_file in base_files:
+        print(base_file)
         m.addBaseFile(base_file)
 
     extracted_dirs = []
@@ -159,8 +158,8 @@ def main():
     parser.add_argument("--report_dir", type=str, default="report", help="Directory to save the report")
     
     # Folder mode arguments
-    parser.add_argument("--base_folder", type=str, help="Path to the base folder containing target_folder (folder mode)")
-    parser.add_argument("--target_folder", type=str, help="Subfolder in base_folder to use as the base files (folder mode)")
+    parser.add_argument("--base_folder", type=str, help="Path to the base folder containing all reference files.")
+    parser.add_argument("--target_folder", type=str, help="Folder that contains the files to be compared.")
     
     # Single file mode arguments
     parser.add_argument("--base_file", type=str, help="Path to the base file (single mode)")

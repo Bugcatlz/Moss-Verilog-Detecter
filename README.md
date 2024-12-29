@@ -101,8 +101,8 @@ python main.py \
 | `--student_dir`      | Directory containing the student submissions (Download and extract by E3).      | Yes                                            | `--student_dir ./submissions`                             |
 | `--report_dir`       | Directory to save the Moss report (default: `report`).                          | No                                             | `--report_dir ./report_output`                            |
 | **Folder mode only** |                                                                                 |                                                |                                                           |
-| `--base_folder`      | Path to the base folder containing all reference files, including the `target_folder`. | Required when `--mode folder` is used   | `--base_folder ./reference_solutions`                     |
-| `--target_folder`    | Subfolder of base_folder that contains the files to be compared.                | Required when `--mode folder` is used          | `--target_folder lab1`                                    |
+| `--base_folder`      | Path to the base folder containing all reference files.                         | Required when `--mode folder` is used   | `--base_folder ./reference_solutions`                     |
+| `--target_folder`    | Folder that contains the files to be compared.                                  | Required when `--mode folder` is used          | `--target_folder lab1`                                    |
 | **Single mode only** |                                                                                 |                                                |                                                           |
 | `--base_file`        | Path to the base Verilog file to compare against (e.g., `reference_module.v`).  | Required when `--mode single` is used          | `--base_file ./reference_solutions/reference_module.v`    |
 | `--target_file`      | **Exact filename** in student submissions to compare.                           | Required when `--mode single` is used          | `--target_file my_module.v`                               |
@@ -136,7 +136,7 @@ Run:
 python main.py \
     --mode folder \
     --userid 123456789 \
-    --base_folder ./base_folder/lab1 \
+    --base_folder ./base_folder/lab1/imuldiv \
     --target_folder imuldiv \
     --student_dir ./submissions \
     --report_dir ./report_output
