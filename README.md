@@ -64,13 +64,13 @@ Once you have your user ID, you can use it with this script by passing it to the
 1. **Clone** or **Download** this repository.
 2. Install the required `mosspy` module:
 ```bash
-    pip install mosspy
+pip install mosspy
 ```
 3. Run the script from the command line, choosing a mode:
 
 ### Folder Mode
 ```bash
-   python plagiarism_checker.py \
+python plagiarism_checker.py \
      --mode folder \
      --userid 123456789 \
      --base_folder /path/to/base_folder \
@@ -81,7 +81,7 @@ Once you have your user ID, you can use it with this script by passing it to the
 
 ### Single File Mode
 ```bash
-   python plagiarism_checker.py \
+python plagiarism_checker.py \
      --mode single \
      --userid 123456789 \
      --base_file /path/to/base_file.v \
@@ -190,7 +190,7 @@ The script will:
 1. **mosspy not installed**  
  Make sure to install `mosspy` via:
 ```bash
-   pip install mosspy
+pip install mosspy
 ```
 
 2. **No `.v` files found in base folder**  
