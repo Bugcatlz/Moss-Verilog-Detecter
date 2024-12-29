@@ -37,7 +37,6 @@ def run_moss_folder(userid, base_folder, target_folder, student_dir, report_dir)
     base_files = glob.glob(os.path.join(base_folder, "*.v"))
 
     for base_file in base_files:
-        print(base_file)
         m.addBaseFile(base_file)
 
     extracted_dirs = []
