@@ -111,9 +111,6 @@ Once you have your user ID, you can use it with this script by passing it to the
 ---
 
 ## Examples
-
-### 1. Folder Mode Example
-
 Assume you have:
 ```
 .
@@ -133,6 +130,8 @@ Assume you have:
 │       └── studentB-lab1.tar.gz
 └── plagiarism_checker.py
 ```
+### 1. Folder Mode Example
+If you only want to compare one Verilog file in specificed folder:
 Run:
 ```bash
 python plagiarism_checker.py \
