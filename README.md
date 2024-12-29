@@ -155,7 +155,7 @@ If you only want to compare one Verilog file, say `my_module.v`, you can do:
 python main.py \
     --mode single \
     --userid 123456789 \
-    --base_file ./base_folder/lab1/imuldiv-IntDivIterative.v \
+    --base_file ./base_folder/lab1/imuldiv/imuldiv-IntDivIterative.v \
     --target_file imuldiv-IntDivIterative.v \
     --student_dir ./submissions \
     --report_dir ./report_output
