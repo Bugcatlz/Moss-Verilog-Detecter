@@ -63,13 +63,13 @@ Once you have your user ID, you can use it with this script by passing it to the
 
 1. **Clone** or **Download** this repository.
 2. Install the required `mosspy` module:
- "`bash
+```bash
     pip install mosspy
- ```
+```
 3. Run the script from the command line, choosing a mode:
 
-   ### Folder Mode
- "`bash
+### Folder Mode
+```bash
    python plagiarism_checker.py \
      --mode folder \
      --userid 123456789 \
@@ -79,8 +79,8 @@ Once you have your user ID, you can use it with this script by passing it to the
      --report_dir /path/to/save_report
  ```
 
-   ### Single File Mode
- "`bash
+### Single File Mode
+```bash
    python plagiarism_checker.py \
      --mode single \
      --userid 123456789 \
@@ -133,7 +133,7 @@ Assume you have:
 ### 1. Folder Mode Example
 If you only want to compare one Verilog file in a specificed folder:
 Run:
-"`bash
+```bash
 python plagiarism_checker.py \
  --mode folder \
     --userid 123456789 \
@@ -152,7 +152,7 @@ The script will:
 
 If you only want to compare one Verilog file, say `my_module.v`, you can do:
 
-"`bash
+```bash
 python plagiarism_checker.py \
  --mode single \
     --userid 123456789 \
