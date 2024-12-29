@@ -101,10 +101,10 @@ python main.py \
 | `--student_dir`      | Directory containing the student submissions (Download and extract by E3).      | Yes                                            | `--student_dir ./submissions`                             |
 | `--report_dir`       | Directory to save the Moss report (default: `report`).                          | No                                             | `--report_dir ./report_output`                            |
 | **Folder mode only** |                                                                                 |                                                |                                                           |
-| `--base_folder`      | Path to the base folder containing all reference files.                         | Required when `--mode folder` is used   | `--base_folder ./reference_solutions`                     |
+| `--base_folder`      | Path to the base folder containing all reference files.                         | Required when `--mode folder` is used          | `--base_folder ./reference          `                     |
 | `--target_folder`    | Folder that contains the files to be compared.                                  | Required when `--mode folder` is used          | `--target_folder lab1`                                    |
 | **Single mode only** |                                                                                 |                                                |                                                           |
-| `--base_file`        | Path to the base Verilog file to compare against (e.g., `reference_module.v`).  | Required when `--mode single` is used          | `--base_file ./reference_solutions/reference_module.v`    |
+| `--base_file`        | Path to the base Verilog file to compare against (e.g., `reference_module.v`).  | Required when `--mode single` is used          | `--base_file ./reference/reference_module.v`              |
 | `--target_file`      | **Exact filename** in student submissions to compare.                           | Required when `--mode single` is used          | `--target_file my_module.v`                               |
 
 
@@ -186,19 +186,19 @@ The script will:
 
 ## Troubleshooting
 
-1. **mosspy not installed**  
+1. **mosspy not installed** \
  Make sure to install `mosspy` via:
     ```bash
     pip install mosspy
     ```
 
-2. **No `.v` files found in base folder**  
+2. **No `.v` files found in base folder** \
  Check your `--base_folder` and `--target_folder` paths in folder mode, or your `--base_file` in single mode.
 
-3. **No `.tar.gz` found in student submissions**  
+3. **No `.tar.gz` found in student submissions** \
  Confirm your `--student_dir` path and ensure the `.tar.gz` files exist there.
 
-4. **Permission issues on `.tar.gz` files**  
+4. **Permission issues on `.tar.gz` files** \
  The script attempts to set the necessary permissions before extracting. If you still encounter issues, manually adjust file permissions or run the script with elevated privileges.
 
 ---
