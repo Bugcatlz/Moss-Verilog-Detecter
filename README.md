@@ -70,24 +70,24 @@ pip install mosspy
 
 ### Folder Mode
 ```bash
-python plagiarism_checker.py \
-     --mode folder \
-     --userid 123456789 \
-     --base_folder /path/to/base_folder \
-     --target_folder folder_name \
-     --student_dir /path/to/student_submissions \
-     --report_dir /path/to/save_report
+python main.py \
+    --mode folder \
+    --userid 123456789 \
+    --base_folder /path/to/base_folder \
+    --target_folder folder_name \
+    --student_dir /path/to/student_submissions \
+    --report_dir /path/to/save_report
  ```
 
 ### Single File Mode
 ```bash
-python plagiarism_checker.py \
-     --mode single \
-     --userid 123456789 \
-     --base_file /path/to/base_file.v \
-     --target_file target_file.v \
-     --student_dir /path/to/student_submissions \
-     --report_dir /path/to/save_report
+python main.py \
+    --mode single \
+    --userid 123456789 \
+    --base_file /path/to/base_file.v \
+    --target_file target_file.v \
+    --student_dir /path/to/student_submissions \
+    --report_dir /path/to/save_report
  ```
 
 ---
@@ -128,19 +128,19 @@ Assume you have:
 │   │   └── studentA-lab1.tar.gz
 │   └── studentB/
 │       └── studentB-lab1.tar.gz
-└── plagiarism_checker.py
+└── main.py
 ```
 ### 1. Folder Mode Example
 If you only want to compare one Verilog file in a specificed folder:
 Run:
 ```bash
-python plagiarism_checker.py \
- --mode folder \
-    --userid 123456789 \
- --base_folder ./base_folder/lab1 \
-    --target_folder imuldiv \
- --student_dir ./submissions \
-    --report_dir ./report_output
+python main.py \
+    --mode folder \
+    --userid 123456789 \
+    --base_folder ./base_folder/lab1 \
+    --target_folder imuldiv \
+    --student_dir ./submissions \
+    --report_dir ./report_output
 ```
 The script will:
 - Treat everything in `./base_folder/lab1/imuldiv/` as "base" files.
@@ -153,13 +153,13 @@ The script will:
 If you only want to compare one Verilog file, say `my_module.v`, you can do:
 
 ```bash
-python plagiarism_checker.py \
- --mode single \
-    --userid 123456789 \
- --base_file ./base_folder/lab1/imuldiv-IntDivIterative.v \
-    --target_file imuldiv-IntDivIterative.v \
- --student_dir ./submissions \
-    --report_dir ./report_output
+python main.py \
+    --mode single \
+    --userid 123456789 \
+    --base_file ./base_folder/lab1/imuldiv-IntDivIterative.v \
+    --target_file imuldiv-IntDivIterative.v \
+    --student_dir ./submissions \
+    --report_dir ./report_output
 ```
 
 The script will:
