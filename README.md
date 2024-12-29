@@ -94,18 +94,18 @@ python main.py \
 
 ### Command-line Arguments
 
-| **Argument** | **Description** | **Required** | **Example** |
+| **Argument**         | **Description**                                                                 | **Required**                                   | **Example**                                               |
 |----------------------|---------------------------------------------------------------------------------|------------------------------------------------|-----------------------------------------------------------|
-| `--mode`             | Operation mode: `folder` or `single`.                                           | Yes                                            | `--mode folder`                                           |
-| `--userid`           | Your Moss user ID. Obtain from the Moss registration process.                   | Yes                                            | `--userid 123456789`                                      |
-| `--student_dir`      | Directory containing the student submissions (Download and extract by E3)       | Yes                                            | `--student_dir ./submissions`                             |
-| `--report_dir`       | Directory to save the Moss report (default: `report`).                          | No                                             | `--report_dir ./report_output`                            |
-| **Folder mode only** |                                                                                 |                                                |                                                           |
-| `--base_folder`      | Path to the base folder containing `target_folder`.                             | Required when `--mode folder` is used          | `--base_folder ./reference_solutions`                     |
-| `--target_folder`    | Subfolder of `base_folder` that will serve as base files.                       | Required when `--mode folder` is used          | `--target_folder lab1`                                    |
-| **Single mode only** |                                                                                 |                                                |                                                           |
-| `--base_file`        | Path to the base Verilog file (e.g., `reference_module.v`).                     | Required when `--mode single` is used          | `--base_file ./reference_module.v`                        |
-| `--target_file`      | **Exact filename** in student submissions to compare.                           | Required when `--mode single` is used          | `--target_file my_module.v`                               |
+| `--mode`             | Operation mode: `folder` or `single`.                                           | Yes                                            | `--mode folder`                                           |
+| `--userid`           | Your Moss user ID. Obtain from the Moss registration process.                   | Yes                                            | `--userid 123456789`                                      |
+| `--student_dir`      | Directory containing the student submissions (Download and extract by E3).      | Yes                                            | `--student_dir ./submissions`                             |
+| `--report_dir`       | Directory to save the Moss report (default: `report`).                          | No                                             | `--report_dir ./report_output`                            |
+| **Folder mode only** |                                                                                 |                                                |                                                           |
+| `--base_folder`      | Path to the base folder containing all reference files, including the `target_folder`. | Required when `--mode folder` is used   | `--base_folder ./reference_solutions`                     |
+| `--target_folder`    | Subfolder of base_folder that contains the files to be compared.                | Required when `--mode folder` is used          | `--target_folder lab1`                                    |
+| **Single mode only** |                                                                                 |                                                |                                                           |
+| `--base_file`        | Path to the base Verilog file to compare against (e.g., `reference_module.v`).  | Required when `--mode single` is used          | `--base_file ./reference_solutions/reference_module.v`    |
+| `--target_file`      | **Exact filename** in student submissions to compare.                           | Required when `--mode single` is used          | `--target_file my_module.v`                               |
 
 
 ---
