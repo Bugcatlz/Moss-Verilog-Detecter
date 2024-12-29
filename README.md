@@ -205,5 +205,4 @@ The script will:
 
 ## Acknowledgments
 
-We gratefully acknowledge the reference and additional guidance provided by  
-[this article](https://hackmd.io/@GjP3NF8qT0SXa2TjRxSKeQ/HJvqIGerE).
+We gratefully acknowledge the reference and additional guidance provided by [this article](https://hackmd.io/@GjP3NF8qT0SXa2TjRxSKeQ/HJvqIGerE).
