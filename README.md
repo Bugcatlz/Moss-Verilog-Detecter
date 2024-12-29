@@ -7,9 +7,9 @@ This Python script automates running **[Moss (Measure of Software Similarity)](h
 2. [How to Register for a Moss User ID](#how-to-register-for-a-moss-user-id)  
 3. [Requirements](#requirements)  
 4. [Usage](#usage)  
-   - [Command-line Arguments](#command-line-arguments)  
-   - [Examples](#examples)  
-   - [Output](#output)  
+    - [Command-line Arguments](#command-line-arguments)  
+    - [Examples](#examples)  
+    - [Output](#output)  
 5. [Troubleshooting](#troubleshooting)  
 6. [Acknowledgments](#acknowledgments)  
 
