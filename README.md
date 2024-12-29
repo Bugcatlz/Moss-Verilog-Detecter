@@ -49,13 +49,13 @@ Once you have your user ID, you can use it with this script by passing it to the
 - **Python 3.6+**  
 - [**mosspy**](https://pypi.org/project/mosspy/) (install via `pip install mosspy`)
 - Other modules used (included in standard Python library):
-  - `glob`
-  - `os`
-  - `tarfile`
-  - `argparse`
-  - `shutil`
-  - `datetime`
-  - `logging`
+    - `glob`
+    - `os`
+    - `tarfile`
+    - `argparse`
+    - `shutil`
+    - `datetime`
+    - `logging`
 
 ---
 
