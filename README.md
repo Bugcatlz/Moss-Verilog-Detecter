@@ -189,9 +189,9 @@ The script will:
 
 1. **mosspy not installed**  
  Make sure to install `mosspy` via:
- "`bash
+```bash
    pip install mosspy
- ```
+```
 
 2. **No `.v` files found in base folder**  
  Check your `--base_folder` and `--target_folder` paths in folder mode, or your `--base_file` in single mode.
