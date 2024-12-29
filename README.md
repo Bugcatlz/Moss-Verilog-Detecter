@@ -18,8 +18,8 @@ This Python script automates running **[Moss (Measure of Software Similarity)](h
 ## Features
 - Detects Verilog code similarities using the official Moss service.
 - **Two modes** of operation:
-  - **folder**: Compare entire folders (submissions must match a specific folder structure).
-  - **single**: Compare a single Verilog file (e.g., `my_module.v`).
+    - **folder**: Compare entire folders (submissions must match a specific folder structure).
+    - **single**: Compare a single Verilog file (e.g., `my_module.v`).
 - Automatically extracts `*.tar.gz` student submissions.
 - Compares student submissions against base files/folders in a specified location.
 - Saves a detailed report (including code diffs) to a timestamped directory.
