@@ -63,9 +63,9 @@ Once you have your user ID, you can use it with this script by passing it to the
 
 1. **Clone** or **Download** this repository.
 2. Install the required `mosspy` module:
-```bash
-pip install mosspy
-```
+    ```bash
+    pip install mosspy
+    ```
 3. Run the script from the command line, choosing a mode:
 
 ### Folder Mode
@@ -113,7 +113,6 @@ python main.py \
 ## Examples
 Assume you have:
 ```
-.
 ├── base_folder/
 │   └── lab1/
 │       ├── build
@@ -174,13 +173,13 @@ The script will:
 
 - After running, the script will print out a Moss report URL to the console.
 - It will then download the entire Moss report (including individual diffs) into a timestamped directory:
- ```
- ./report_output/YYYY_MM_DD_HH_MM_SS/
- ├── report.html
- ├── diff1.html
- ├── diff2.html
- └── ...
- ```
+    ```
+    ./report_output/YYYY_MM_DD_HH_MM_SS/
+    ├── report.html
+    ├── diff1.html
+    ├── diff2.html
+    └── ...
+    ```
 - Open the `report.html` file in a browser to see the detailed results.
 
 ---
@@ -189,9 +188,9 @@ The script will:
 
 1. **mosspy not installed**  
  Make sure to install `mosspy` via:
-```bash
-pip install mosspy
-```
+    ```bash
+    pip install mosspy
+    ```
 
 2. **No `.v` files found in base folder**  
  Check your `--base_folder` and `--target_folder` paths in folder mode, or your `--base_file` in single mode.
