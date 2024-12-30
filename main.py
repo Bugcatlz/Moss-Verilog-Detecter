@@ -34,7 +34,7 @@ def run_moss_folder(userid, base_folder, target_folder, student_dir, report_dir)
     """
     m = mosspy.Moss(userid, "verilog")
 
-    if base_folder not None:
+    if base_folder is not None:
         base_files = glob.glob(os.path.join(base_folder, "*.v"))
 
         for base_file in base_files:
