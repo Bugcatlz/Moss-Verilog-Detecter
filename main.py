@@ -34,10 +34,11 @@ def run_moss_folder(userid, base_folder, target_folder, student_dir, report_dir)
     """
     m = mosspy.Moss(userid, "verilog")
 
-    base_files = glob.glob(os.path.join(base_folder, "*.v"))
+    if base_folder not None:
+        base_files = glob.glob(os.path.join(base_folder, "*.v"))
 
-    for base_file in base_files:
-        m.addBaseFile(base_file)
+        for base_file in base_files:
+            m.addBaseFile(base_file)
 
     extracted_dirs = []
 
@@ -79,10 +80,11 @@ def run_moss_single(userid, base_file, target_file, student_dir):
     """
     m = mosspy.Moss(userid, "verilog")
 
-    if os.path.exists(base_file):
-        m.addBaseFile(base_file)
-    else:
-        raise FileNotFoundError(f"Base file '{base_file}' not found!")
+    if base_file is not None:
+        if os.path.exists(base_file):
+            m.addBaseFile(base_file)
+        else:
+            raise FileNotFoundError(f"Base file '{base_file}' not found!")
 
     extracted_dirs = []
 
@@ -167,7 +169,7 @@ def main():
     args = parser.parse_args()
 
     if args.mode == 'folder':
-        if not all([args.base_folder, args.target_folder]):
+        if not all([args.target_folder]):
             parser.error("Folder mode requires --base_folder and --target_folder")
         m, extracted_dirs = run_moss_folder(
             userid=args.userid,
@@ -177,7 +179,7 @@ def main():
             report_dir=args.report_dir
         )
     else:  # single mode
-        if not all([args.base_file, args.target_file]):
+        if not all([args.target_file]):
             parser.error("Single mode requires --base_file and --target_file")
         m, extracted_dirs = run_moss_single(
             userid=args.userid,

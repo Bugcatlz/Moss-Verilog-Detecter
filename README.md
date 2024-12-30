@@ -101,10 +101,10 @@ python main.py \
 | `--student_dir`      | Directory containing the student submissions (Download and extract by E3).      | Yes                                            | `--student_dir ./submissions`                             |
 | `--report_dir`       | Directory to save the Moss report (default: `report`).                          | No                                             | `--report_dir ./report_output`                            |
 | **Folder mode only** |                                                                                 |                                                |                                                           |
-| `--base_folder`      | Path to the base folder containing all reference files.                         | Required when `--mode folder` is used          | `--base_folder ./reference`                               |
+| `--base_folder`      | Path to the base folder containing all reference files.                         | No                                             | `--base_folder ./reference`                               |
 | `--target_folder`    | Folder that contains the files to be compared.                                  | Required when `--mode folder` is used          | `--target_folder lab1`                                    |
 | **Single mode only** |                                                                                 |                                                |                                                           |
-| `--base_file`        | Path to the base Verilog file to compare against (e.g., `reference_module.v`).  | Required when `--mode single` is used          | `--base_file ./reference/reference_module.v`              |
+| `--base_file`        | Path to the base Verilog file to compare against (e.g., `reference_module.v`).  | No                                             | `--base_file ./reference/reference_module.v`              |
 | `--target_file`      | **Exact filename** in student submissions to compare.                           | Required when `--mode single` is used          | `--target_file my_module.v`                               |
 
 
