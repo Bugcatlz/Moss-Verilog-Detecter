@@ -119,7 +119,7 @@ def run_moss_single(userid, base_file, target_file, student_dir):
 
     return m, extracted_dirs
 
-def save_moss_report(m, extracted_dirs, report_dir):
+def save_moss_report(m, extracted_dirs, report_dir, delete):
     """
     Save Moss report and clean up extracted directories.
     """
@@ -139,16 +139,17 @@ def save_moss_report(m, extracted_dirs, report_dir):
     else:
         print("Report saving failed.")
 
-    for dir_path in extracted_dirs:
-        if os.path.exists(dir_path):
-            try:
-                for root, _, files in os.walk(dir_path):
-                    for file in files:
-                        file_path = os.path.join(root, file)
-                        os.chmod(file_path, stat.S_IWUSR)
-                shutil.rmtree(dir_path)
-            except Exception as e:
-                print(f"Warning: Failed to delete '{dir_path}'. Error: {e}")
+    if delete:
+        for dir_path in extracted_dirs:
+            if os.path.exists(dir_path):
+                try:
+                    for root, _, files in os.walk(dir_path):
+                        for file in files:
+                            file_path = os.path.join(root, file)
+                            os.chmod(file_path, stat.S_IWUSR)
+                    shutil.rmtree(dir_path)
+                except Exception as e:
+                    print(f"Warning: Failed to delete '{dir_path}'. Error: {e}")
 
 def main():
     parser = argparse.ArgumentParser(description="Moss plagiarism detection script for Verilog files.")
@@ -157,7 +158,8 @@ def main():
     parser.add_argument("--userid", type=int, required=True, help="Your Moss user ID")
     parser.add_argument("--student_dir", type=str, required=True, help="Directory containing student submissions")
     parser.add_argument("--report_dir", type=str, default="report", help="Directory to save the report")
-    
+    parser.add_argument("--delete",  action="store_true", help="Delete student extracted files")
+
     # Folder mode arguments
     parser.add_argument("--base_folder", type=str, help="Path to the base folder containing all reference files.")
     parser.add_argument("--target_folder", type=str, help="Folder that contains the files to be compared.")
@@ -188,7 +190,7 @@ def main():
             student_dir=args.student_dir
         )
 
-    save_moss_report(m, extracted_dirs, args.report_dir)
+    save_moss_report(m, extracted_dirs, args.report_dir, args.delete)
 
 if __name__ == "__main__":
     try:

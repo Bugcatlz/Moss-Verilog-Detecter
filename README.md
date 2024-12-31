@@ -100,6 +100,7 @@ python main.py \
 | `--userid`           | Your Moss user ID. Obtain from the Moss registration process.                   | Yes                                            | `--userid 123456789`                                      |
 | `--student_dir`      | Directory containing the student submissions (Download and extract by E3).      | Yes                                            | `--student_dir ./submissions`                             |
 | `--report_dir`       | Directory to save the Moss report (default: `report`).                          | No                                             | `--report_dir ./report_output`                            |
+| `--delete`           | Delete student extracted files(default: `False`)                                | No                                             | `--delete`                                                |
 | **Folder mode only** |                                                                                 |                                                |                                                           |
 | `--base_folder`      | Path to the base folder containing all reference files.                         | No                                             | `--base_folder ./reference`                               |
 | `--target_folder`    | Folder that contains the files to be compared.                                  | Required when `--mode folder` is used          | `--target_folder lab1`                                    |
